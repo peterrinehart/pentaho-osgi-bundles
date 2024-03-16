@@ -39,12 +39,13 @@
             <Bundle-SymbolicName>${project.artifactId}</Bundle-SymbolicName>
             <Embed-Dependency>cache-api</Embed-Dependency>
             <Embed-Transitive>true</Embed-Transitive>
+            <_noimportjava>true</_noimportjava>
             <_exportcontents>javax.cache,
                             javax.cache.*;version=${cache-api.version}</_exportcontents>
             <Export-Package>org.pentaho.caching.api;version=${project.version},
                             org.pentaho.caching.spi;version=${project.version}</Export-Package>
             <Import-Package>org.osgi.framework, org.osgi.service.cm,
-                            com.google.common.*, com.google.common.util.concurrent,
+                            com.google.common.*,
                             org.osgi.service.blueprint,
                             !javax.enterprise.util,
                             !javax.management</Import-Package>
