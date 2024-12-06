@@ -223,6 +223,8 @@ public class KarafFeatureWatcherImpl implements IKarafFeatureWatcher {
       return Collections.emptyList();
     }
 
+    logger.debug( "Reading config {} property {} value {}", configPersistentId, featuresPropertyKey, featuresPropertyValue );
+
     // remove parentesis from feature stages
     featuresPropertyValue = featuresPropertyValue.replaceAll( "[()]", "" );
     if ( featuresPropertyValue.length() == 0 ) {
